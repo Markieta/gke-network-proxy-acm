@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: k8s-api-proxy
+  name: k8s-api-proxy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: k8s-api-proxy
+  template:
+    metadata:
+      labels:
+        app: k8s-api-proxy
+    spec:
+      containers:
+      - image: markieta/k8s-api-proxy:0.1
+        name: k8s-api-proxy
