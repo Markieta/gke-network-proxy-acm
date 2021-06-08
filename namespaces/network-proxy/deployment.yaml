@@ -15,7 +15,7 @@ spec:
         app: k8s-api-proxy
     spec:
       containers:
-      - image: markieta/k8s-api-proxy:0.1
+      - image: gcr.io/arctiq-anthos/k8s-api-proxy:0.1 # markieta/k8s-api-proxy:0.1 # Public - Docker Hub
         name: k8s-api-proxy
         ports:
         - containerPort: 8118
